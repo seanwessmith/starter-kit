@@ -16,3 +16,10 @@ The client consists of the following:
 - React
 - SASS
 - Webpack 4
+
+## Instructions
+1. git clone https://github.com/seanwessmith/starter-kit.git
+2. cd starter-kit
+3. npm install
+4. npm start
+5. open localhost:3000 in Chrome
