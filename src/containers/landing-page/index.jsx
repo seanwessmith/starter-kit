@@ -1,32 +1,15 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
-import './style.scss';
+import FanEnergy from '../../components/fanEnergy';
 
-const InfoPage = (props) => {
-  console.log('LandingPage props: ', props);
-
-  const people = () => {
-    if (!props.people) {
-      return null;
-    }
-    return (
-      props.people.map((p) => (
-        <p key={p.name}>{p.name} is working the position {p.position}</p>
-      ))
-    );
-  }
-
-  function handleClick() {
-    props.history.push('/info-page');
-  }
-
+const LandingPage = (props) => {
   return (
     <div className='landing-page-container'>
-      <h1>This is the Landing Page</h1>
-      {people()}
-      <button onClick={handleClick}>Go to Info Page</button>
+      <h2>AHUS</h2>
+      <div className="ahus-container">
+        <FanEnergy />
+      </div>
     </div>
   )
 }
 
-export default withRouter(InfoPage);
+export default LandingPage;
