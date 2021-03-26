@@ -1,5 +1,5 @@
-import path from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: ['@babel/polyfill', path.join(__dirname, 'src', 'index.js')],
@@ -7,13 +7,6 @@ module.exports = {
     path: path.join(__dirname, 'build'),
     filename: 'index.bundle.js',
     publicPath: '/',
-  },
-  node: {
-    dgram: 'empty',
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty',
-    child_process: 'empty',
   },
   resolve: {
     extensions: ['*', '.js', '.jsx', 'json', '.scss'],
@@ -28,6 +21,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'public', 'index.html'),
+      favicon: "./public/favicon.gif"
     }),
   ],
   module: {
@@ -54,10 +48,5 @@ module.exports = {
         },
       },
     ],
-  },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
   },
 };
