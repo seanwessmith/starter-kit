@@ -15,7 +15,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 The client consists of the following:
 - React
 - SASS
-- Webpack 4
+- Webpack 5
 
 ## Instructions
 1. git clone https://github.com/seanwessmith/starter-kit.git
