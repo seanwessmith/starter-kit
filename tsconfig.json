@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    // add Bun type definitions
+    "types": ["bun-types"],
+    // enable latest features
+    "lib": ["esnext", "dom"],
+    "target": "es2020",
+    "module": "commonjs",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    "jsx": "preserve", // support JSX
+    "allowJs": true, // allow importing `.js` from `.ts`
+    "esModuleInterop": true, // allow default imports for CommonJS modules
+    // best practices
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/routers/*": ["src/server/routers/*"],
+      "@/webhooks/*": ["src/server/routers/webhooks/*"],
+      "@/*": ["./src/*"]
+    },
+    "incremental": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  },
+  "ts-node": {
+    "files": true
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}

@@ -1,0 +1,213 @@
+@font-face {
+  font-family: "Söhne";
+  src: url("https://cdn.oaistatic.com/_next/static/media/soehne-buch.13189857.woff2")
+    format("woff2");
+}
+
+* {
+  font-family: "Söhne", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: #343541;
+  padding: 50px;
+  width: calc(100% - 110px);
+}
+
+a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 20px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  color: #ffffff;
+}
+
+pre h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+pre h2 {
+  font-size: 26.4px;
+  font-weight: 400;
+}
+pre h3 {
+  font-size: 19.8px;
+  font-weight: 400;
+}
+pre p {
+  font-size: 15px;
+  font-weight: 400;
+}
+pre h1,
+pre h2,
+pre h3,
+pre h4,
+pre p {
+  margin: 0;
+  color: #000;
+  font-family: -apple-system, "system-ui", "Segoe UI", Roboto, Ubuntu,
+    "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+#page-title {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 200px;
+  margin-bottom: 50px;
+
+  h1 {
+    margin: 0;
+    line-height: 35px;
+  }
+}
+
+#root {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+button {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 4px;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+
+  &:disabled,
+  &:disabled:hover {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  &.secondary {
+    background-color: #ccc;
+    color: #000000;
+  }
+}
+
+.spinner {
+  border: 5px solid #f3f3f3; // Light grey background
+  border-top: 5px solid #3498db; // Blue color
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+textarea {
+  border: 2px solid #009688; // Solid border with a teal color
+  padding: 10px; // Spacing inside the box
+  font-size: 16px; // Font size
+  border-radius: 5px; // Rounded corners
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); // Subtle shadow for depth
+  resize: none; // Prevent manual resizing
+  outline: none; // Removes the outline
+  width: calc(100% - 24px);
+
+  &:focus {
+    border-color: #4caf50; // Change border color when focused
+    box-shadow: 0px 2px 5px rgba(0, 150, 136, 0.4); // More prominent shadow
+  }
+}
+
+pre {
+  color: white;
+  background-color: #343541;
+  width: calc(100% + 40px);
+}
+
+// Define a mixin for the loading div
+@mixin loading-div($background-color) {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+
+  .spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+  }
+
+  .text {
+    margin-left: 10px;
+    color: white;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+// Usage example
+.loading-div {
+  @include loading-div(#0071e3); // Pass the background color here
+}
+
+@keyframes slide {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.app-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+body {
+  display: flex;
+  flex-direction: row;
+  padding-top: 50px;
+}
+nav {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding-right: 50px;
+  a.active {
+    text-decoration: underline;
+  }
+}
+ul {
+  color: white;
+}
+table {
+  color: white;
+}

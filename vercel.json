@@ -1,0 +1,19 @@
+{
+  "functions": {
+    "pages/api/**/*": {
+      "maxDuration": 300
+    },
+    "pages/api/trpc/[trpc].ts": {
+      "maxDuration": 300
+    },
+    "pages/api/webhooks/exampleWebhook.ts": {
+      "maxDuration": 300
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/webhooks/exampleWebhook",
+      "schedule": "0 * * * *"
+    }
+  ]
+}
