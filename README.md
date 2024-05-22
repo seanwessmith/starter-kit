@@ -19,13 +19,13 @@ It includes an optional SDK and Supabase database.
 1. New pages go in `/app/[page name]/page.tsx`. Where page name is the name of the page and the route.
 2. Update /app/clientComponent.tsx to navigate to the appropriate page.
 
-### SDK Routes
+### SDK Routes (optional)
 
 1. New sdk routes go in `/src/server/routers/[route name]`. Where route name is the new route.
 2. Create an `/src/server/routers/[route name]/index.ts` file that will mergeRouters from sibling files.
 3. Create sibling files with the second route name `/src/server/routers/[route name]/[second route name].ts`.
 
-### Supabase
+### Supabase (optional)
 
 1. In the repo root install Supabase cli `brew install supabase/tap/supabase`
 2. In the repo root run `supabase login`
