@@ -21,8 +21,6 @@
     "@trpc/server": "11.0.0-rc.374",
     "@types/jquery": "^3.5.30",
     "@types/node": "^20.12.12",
-    "cross-env": "^7.0.3",
-    "dotenv-cli": "^7.4.2",
     "next": "14.2.3",
     "react": "18.3.1",
     "sass": "1.77.2",
