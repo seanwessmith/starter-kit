@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Starter Kit",
+  title: "Wado Sanzo Colors",
 };
 
 export default function MyApp() {

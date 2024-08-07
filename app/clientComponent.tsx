@@ -1,12 +1,11 @@
 import { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import favicon from "./favicon.ico";
 import { capitalizeFirstLetter } from "@/server/utils/string";
+import AboutPage from "./about/page";
 
 export const metadata: Metadata = {
-  title: "Starter Kit",
+  title: "Wado Sanzo Colors",
 };
 
 export default function ClientComponent({
@@ -28,7 +27,8 @@ export default function ClientComponent({
   return (
     <html>
       <body>
-        <Image
+        <AboutPage />
+        {/* <Image
           className="app-icon"
           src={favicon}
           alt="Starter Kit"
@@ -39,7 +39,7 @@ export default function ClientComponent({
           {link("main")}
           {link("about")}
         </nav>
-        <section>{children}</section>
+        <section>{children}</section> */}
       </body>
     </html>
   );
