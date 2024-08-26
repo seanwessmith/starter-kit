@@ -3,7 +3,7 @@ import "./style.scss";
 
 export default function AboutPage() {
   return (
-    <div className="about-page">
+    <div>
       <h1>Main Page</h1>
       <p></p>
       <div>

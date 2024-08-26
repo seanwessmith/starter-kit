@@ -1,5 +1,7 @@
 "use client";
 
+// * Uncomment the following lines to use Supabase on the client
+
 import { useEffect, useState } from "react";
 // import { createClient } from "@supabase/supabase-js";
 // import { Database } from "@/server/types/database.types";
@@ -44,7 +46,7 @@ export default function AboutPage() {
         {loading ? <></> : <p>Loading...</p>}
         {error ? <p>{error}</p> : <></>}
         {people.length > 0 ? (
-          <table>
+          <table className="text-white">
             <thead>
               <tr>
                 <th className="noselect">ID</th>
@@ -56,10 +58,10 @@ export default function AboutPage() {
             <tbody>
               {people.map((person, index) => (
                 <tr key={index}>
-                  <td>{person.id}</td>
-                  <td>{person.name}</td>
-                  <td>{person.title}</td>
-                  <td>{timestampToDate(person.startdatetimestamp)}</td>
+                  <td className="px-4">{person.id}</td>
+                  <td className="px-4">{person.name}</td>
+                  <td className="px-4">{person.title}</td>
+                  <td className="px-4">{timestampToDate(person.startdatetimestamp)}</td>
                 </tr>
               ))}
             </tbody>
